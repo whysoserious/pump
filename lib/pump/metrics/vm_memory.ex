@@ -62,15 +62,3 @@ defmodule Pump.Metrics.VMMemory do
     ]
   end
 end
-
-[
-  total: 27_202_080,
-  processes: 5_564_376,
-  processes_used: 5_564_376,
-  system: 21_637_704,
-  atom: 512_625,
-  atom_used: 491_310,
-  binary: 144_992,
-  code: 13_276_499,
-  ets: 877_928
-]
