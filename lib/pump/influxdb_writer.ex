@@ -27,12 +27,25 @@ defmodule Pump.InfluxDBWriter do
   def post_data(""), do: :ok
 
   def post_data(payload, http_client) do
-    case post(http_client, "/write", payload) do
-      {:ok, %{status: 204}} -> :ok
-      {:ok, %{body: %{"error" => error_msg}}} -> {:error, error_msg}
-      {:ok, %{body: body}} -> {:error, body}
-      {:error, error} -> {:error, error}
+    response = post(http_client, "/write", payload)
+
+    result =
+      case response do
+        {:ok, %{status: 204}} -> :ok
+        {:ok, %{body: %{"error" => error_msg}}} -> {:error, error_msg}
+        {:ok, %{body: body}} -> {:error, body}
+        {:error, error} -> {:error, error}
+      end
+
+    case result do
+      {:error, _} ->
+        Logger.debug("Error HTTP response: #{inspect(response)}")
+
+      _ ->
+        nil
     end
+
+    result
   end
 
   def data_to_line_protocol(data, custom_tags) when is_list(data) do
