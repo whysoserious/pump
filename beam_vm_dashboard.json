@@ -1,43 +1,8 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_LOCALHOST",
-      "label": "localhost",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "influxdb",
-      "pluginName": "InfluxDB"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "5.1.2"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": "5.0.0"
-    },
-    {
-      "type": "datasource",
-      "id": "influxdb",
-      "name": "InfluxDB",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "singlestat",
-      "name": "Singlestat",
-      "version": "5.0.0"
-    }
-  ],
   "annotations": {
     "list": [
       {
+        "$$hashKey": "object:2385",
         "builtIn": 1,
         "datasource": "-- Grafana --",
         "enable": true,
@@ -52,8 +17,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": null,
-  "iteration": 1526568392721,
+  "id": 3,
+  "iteration": 1526638403018,
   "links": [],
   "panels": [
     {
@@ -65,7 +30,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_LOCALHOST}",
+      "datasource": "localhost",
       "format": "ms",
       "gauge": {
         "maxValue": 100,
@@ -172,7 +137,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_LOCALHOST}",
+      "datasource": "localhost",
       "description": "",
       "fill": 1,
       "gridPos": {
@@ -208,7 +173,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "atom_used",
+          "alias": "Amount of memory currently used for atoms",
           "groupBy": [
             {
               "params": [
@@ -247,7 +212,7 @@
           "tags": []
         },
         {
-          "alias": "atom_free",
+          "alias": "Amount of memory currently allocated and not used by atoms",
           "groupBy": [
             {
               "params": [
@@ -286,7 +251,7 @@
           "tags": []
         },
         {
-          "alias": "processes_used",
+          "alias": "Amount of memory currently used by the Erlang processes",
           "groupBy": [
             {
               "params": [
@@ -325,7 +290,7 @@
           "tags": []
         },
         {
-          "alias": "processes_free",
+          "alias": "Amount of memory currently allocated and not used by the Erlang processes",
           "groupBy": [
             {
               "params": [
@@ -410,7 +375,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_LOCALHOST}",
+      "datasource": "localhost",
       "description": "",
       "fill": 1,
       "gridPos": {
@@ -445,7 +410,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "processes_allocated",
+          "alias": "Amount of memory currently used by the Erlang processes",
           "groupBy": [
             {
               "params": [
@@ -484,7 +449,7 @@
           "tags": []
         },
         {
-          "alias": "system_allocated",
+          "alias": "Amount of memory currently allocated for the emulator that is not directly related to any Erlang process",
           "groupBy": [
             {
               "params": [
@@ -569,7 +534,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_LOCALHOST}",
+      "datasource": "localhost",
       "description": "",
       "fill": 1,
       "gridPos": {
@@ -604,7 +569,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "ets_tables_count",
+          "alias": "Number of all ETS tables at the node",
           "groupBy": [
             {
               "params": [
@@ -643,7 +608,7 @@
           "tags": []
         },
         {
-          "alias": "dets_tables_count",
+          "alias": "Number of all DETS tables at the node",
           "groupBy": [
             {
               "params": [
@@ -728,7 +693,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_LOCALHOST}",
+      "datasource": "localhost",
       "description": "",
       "fill": 1,
       "gridPos": {
@@ -763,7 +728,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "atom_allocated",
+          "alias": "Amount of memory currently allocated for atoms",
           "groupBy": [
             {
               "params": [
@@ -802,7 +767,7 @@
           "tags": []
         },
         {
-          "alias": "binary_allocated",
+          "alias": "Amount of memory currently allocated for binaries",
           "groupBy": [
             {
               "params": [
@@ -841,7 +806,7 @@
           "tags": []
         },
         {
-          "alias": "code_allocated",
+          "alias": "Amount of memory currently allocated for Erlang code",
           "groupBy": [
             {
               "params": [
@@ -880,7 +845,7 @@
           "tags": []
         },
         {
-          "alias": "ets_allocated",
+          "alias": "Amount of memory currently allocated for ETS tables",
           "groupBy": [
             {
               "params": [
@@ -919,7 +884,7 @@
           "tags": []
         },
         {
-          "alias": "system_allocated",
+          "alias": "Amount of memory currently allocated for the emulator that is not directly related to any Erlang process",
           "groupBy": [
             {
               "params": [
@@ -958,7 +923,7 @@
           "tags": []
         },
         {
-          "alias": "other_allocated",
+          "alias": "Amount of memory currently allocated for other purposes",
           "groupBy": [
             {
               "params": [
@@ -1043,7 +1008,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_LOCALHOST}",
+      "datasource": "localhost",
       "description": "",
       "fill": 1,
       "gridPos": {
@@ -1078,7 +1043,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "context_switches_count",
+          "alias": "Total number of context switches",
           "groupBy": [
             {
               "params": [
@@ -1163,7 +1128,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_LOCALHOST}",
+      "datasource": "localhost",
       "description": "",
       "fill": 1,
       "gridPos": {
@@ -1198,7 +1163,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "bytes_output",
+          "alias": "Total number of bytes output to ports",
           "groupBy": [
             {
               "params": [
@@ -1237,7 +1202,7 @@
           "tags": []
         },
         {
-          "alias": "bytes_received",
+          "alias": "Total number of bytes received through ports",
           "groupBy": [
             {
               "params": [
@@ -1322,7 +1287,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_LOCALHOST}",
+      "datasource": "localhost",
       "description": "",
       "fill": 1,
       "gridPos": {
@@ -1357,7 +1322,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "runtime",
+          "alias": "Sum of the runtime for all threads in the Erlang runtime system",
           "groupBy": [
             {
               "params": [
@@ -1442,7 +1407,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_LOCALHOST}",
+      "datasource": "localhost",
       "description": "",
       "fill": 1,
       "gridPos": {
@@ -1450,324 +1415,6 @@
         "w": 12,
         "x": 0,
         "y": 36
-      },
-      "id": 8,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "max": true,
-        "min": true,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "repeatDirection": "h",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "alias": "dirty_cpu_run_queue_length",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "hide": false,
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT mean(\"value\") FROM \"erlang_vm_statistics_dirty_cpu_run_queue_length\" WHERE \"device_id\" =~ /^$VM$/ AND $timeFilter GROUP BY time($Interval) fill(null)",
-          "rawQuery": true,
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "value"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": []
-        },
-        {
-          "alias": "dirty_io_run_queue_length",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "hide": false,
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT mean(\"value\") FROM \"erlang_vm_statistics_dirty_io_run_queue_length\" WHERE \"device_id\" =~ /^$VM$/ AND $timeFilter GROUP BY time($Interval) fill(null)",
-          "rawQuery": true,
-          "refId": "B",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "value"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": []
-        },
-        {
-          "alias": "run_queues_length",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "hide": false,
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT mean(\"value\") FROM \"erlang_vm_statistics_run_queues_length\" WHERE \"device_id\" =~ /^$VM$/ AND $timeFilter GROUP BY time($Interval) fill(null)",
-          "rawQuery": true,
-          "refId": "C",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "value"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": []
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "$VM - Run queues",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "cumulative"
-      },
-      "transparent": false,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": "Count",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": "Count",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "${DS_LOCALHOST}",
-      "description": "",
-      "fill": 1,
-      "gridPos": {
-        "h": 9,
-        "w": 12,
-        "x": 12,
-        "y": 36
-      },
-      "id": 11,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "max": true,
-        "min": true,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "repeatDirection": "h",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "alias": "number_of_gcs",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "hide": false,
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT spread(\"value\") FROM \"erlang_vm_statistics_garbage_collection_number_of_gcs\" WHERE \"device_id\" =~ /^$VM$/ AND $timeFilter GROUP BY time($Interval) fill(null)",
-          "rawQuery": true,
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "value"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": []
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "$VM - Garbage collection",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "cumulative"
-      },
-      "transparent": false,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": "Count",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": "Count",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "${DS_LOCALHOST}",
-      "description": "",
-      "fill": 1,
-      "gridPos": {
-        "h": 9,
-        "w": 12,
-        "x": 0,
-        "y": 45
       },
       "id": 9,
       "legend": {
@@ -1795,7 +1442,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "bytes_reclaimed",
+          "alias": "Bytes reclaimed during GC",
           "groupBy": [
             {
               "params": [
@@ -1880,7 +1527,325 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_LOCALHOST}",
+      "datasource": "localhost",
+      "description": "",
+      "fill": 1,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 36
+      },
+      "id": 11,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeatDirection": "h",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "Number of GCs",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT spread(\"value\") FROM \"erlang_vm_statistics_garbage_collection_number_of_gcs\" WHERE \"device_id\" =~ /^$VM$/ AND $timeFilter GROUP BY time($Interval) fill(null)",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$VM - Garbage collection",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "cumulative"
+      },
+      "transparent": false,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": "Count",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": "Count",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "localhost",
+      "description": "",
+      "fill": 1,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 45
+      },
+      "id": 8,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeatDirection": "h",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "Dirty CPU run queue length",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT mean(\"value\") FROM \"erlang_vm_statistics_dirty_cpu_run_queue_length\" WHERE \"device_id\" =~ /^$VM$/ AND $timeFilter GROUP BY time($Interval) fill(null)",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "Dirty IO run queue length",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT mean(\"value\") FROM \"erlang_vm_statistics_dirty_io_run_queue_length\" WHERE \"device_id\" =~ /^$VM$/ AND $timeFilter GROUP BY time($Interval) fill(null)",
+          "rawQuery": true,
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "Length of all normal run-queues",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT mean(\"value\") FROM \"erlang_vm_statistics_run_queues_length\" WHERE \"device_id\" =~ /^$VM$/ AND $timeFilter GROUP BY time($Interval) fill(null)",
+          "rawQuery": true,
+          "refId": "C",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$VM - Run queues",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "cumulative"
+      },
+      "transparent": false,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": "Count",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": "Count",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "localhost",
       "description": "",
       "fill": 1,
       "gridPos": {
@@ -1915,7 +1880,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "atom_count",
+          "alias": "Number of atoms currently existing at the local node",
           "groupBy": [
             {
               "params": [
@@ -2000,134 +1965,14 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_LOCALHOST}",
+      "datasource": "localhost",
       "description": "",
       "fill": 1,
       "gridPos": {
         "h": 9,
         "w": 12,
-        "x": 12,
+        "x": 0,
         "y": 54
-      },
-      "id": 16,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "max": true,
-        "min": true,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [],
-      "nullPointMode": "null",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "repeatDirection": "h",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "alias": "process_count",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "hide": false,
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT mean(\"value\") FROM \"erlang_vm_process_count\" WHERE \"device_id\" =~ /^$VM$/ AND $timeFilter GROUP BY time($Interval) fill(null)",
-          "rawQuery": true,
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "value"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              }
-            ]
-          ],
-          "tags": []
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "$VM - Processes count",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "cumulative"
-      },
-      "transparent": false,
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": "Count",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": "Count",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "${DS_LOCALHOST}",
-      "description": "",
-      "fill": 1,
-      "gridPos": {
-        "h": 9,
-        "w": 12,
-        "x": 12,
-        "y": 63
       },
       "id": 17,
       "legend": {
@@ -2155,7 +2000,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "process_count",
+          "alias": "Number of atoms currently existing at the local node",
           "groupBy": [
             {
               "params": [
@@ -2234,6 +2079,126 @@
         "align": false,
         "alignLevel": null
       }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "localhost",
+      "description": "",
+      "fill": 1,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 54
+      },
+      "id": 16,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeatDirection": "h",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "Number of processes currently existing at the local node",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT mean(\"value\") FROM \"erlang_vm_process_count\" WHERE \"device_id\" =~ /^$VM$/ AND $timeFilter GROUP BY time($Interval) fill(null)",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "$VM - Processes count",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "cumulative"
+      },
+      "transparent": false,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": "Count",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": "Count",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     }
   ],
   "refresh": false,
@@ -2244,8 +2209,11 @@
     "list": [
       {
         "allValue": null,
-        "current": {},
-        "datasource": "${DS_LOCALHOST}",
+        "current": {
+          "text": "proto6",
+          "value": "proto6"
+        },
+        "datasource": "localhost",
         "hide": 0,
         "includeAll": false,
         "label": null,
@@ -2373,5 +2341,5 @@
   "timezone": "browser",
   "title": "BEAM VM",
   "uid": "zKf0TB7ik",
-  "version": 62
+  "version": 2
 }
