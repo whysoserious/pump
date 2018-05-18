@@ -6,7 +6,7 @@ config :pump,
   db_name: "dust_dev",
   user: "dust_test",
   password: "dust_test",
-  custom_tags: [machine_id: "proto5"],
+  custom_tags: [device_id: "proto5"],
   query_params: [],
   send_interval: 5000
 
