@@ -26,8 +26,8 @@ defmodule Pump do
     query_params = Keyword.get(env, :query_params, [])
 
     http_client = InfluxDBWriter.http_client(base_url, db_name, user, password, query_params)
-
-    state = {http_client, custom_tags, send_interval}
+    tags = Keyword.merge([device_id: device_id], custom_tags)
+    state = {http_client, tags, send_interval}
 
     Process.send(self(), :send_stats, [])
 
