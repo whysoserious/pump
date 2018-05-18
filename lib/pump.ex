@@ -3,7 +3,6 @@ defmodule Pump do
 
   require Logger
 
-  # TODO behaviour
   alias Pump.Metrics.{OSMon, VMMemory, VMStatistics, VMSystemInfo}
   alias Pump.InfluxDBWriter
 
@@ -15,9 +14,10 @@ defmodule Pump do
     Logger.debug("Start Pump with env: #{inspect(env)}")
 
     # required params
-    base_url = Keyword.get(env, :base_url)
-    db_name = Keyword.get(env, :db_name)
-    send_interval = Keyword.get(env, :send_interval)
+    base_url = Keyword.fetch!(env, :base_url)
+    db_name = Keyword.fetch!(env, :db_name)
+    send_interval = Keyword.fetch!(env, :send_interval)
+    device_id = Keyword.fetch!(env, :device_id)
 
     # optional params
     user = Keyword.get(env, :user)
