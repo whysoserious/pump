@@ -34,9 +34,9 @@ defmodule Pump do
     {:ok, state}
   end
 
-  def handle_info(:send_stats, {http_client, custom_tags, send_interval} = state) do
+  def handle_info(:send_stats, {http_client, tags, send_interval} = state) do
     stats = gather_stats()
-    send_stats(http_client, stats, custom_tags)
+    send_stats(http_client, stats, tags)
 
     Process.send_after(self(), :send_stats, send_interval)
 
@@ -47,7 +47,7 @@ defmodule Pump do
     VMMemory.metrics() ++ VMStatistics.metrics() ++ VMSystemInfo.metrics() ++ OSMon.metrics()
   end
 
-  def send_stats(http_client, stats, custom_tags) do
+  def send_stats(http_client, stats, tags) do
     case Pump.InfluxDBWriter.write(http_client, stats, custom_tags) do
       {:error, error} ->
         Logger.warn("Error sending measurements to InfluxDB. Reason: #{inspect(error)}")
