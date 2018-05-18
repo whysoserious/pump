@@ -50,10 +50,11 @@ defmodule Pump do
   def send_stats(http_client, stats, custom_tags) do
     case Pump.InfluxDBWriter.write(http_client, stats, custom_tags) do
       {:error, error} ->
+        Logger.warn("Error sending measurements to InfluxDB. Reason: #{inspect(error)}")
         {:error, error}
 
-      _ ->
-        :ok
+      other ->
+        other
     end
   end
 end
