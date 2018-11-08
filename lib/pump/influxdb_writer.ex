@@ -4,7 +4,7 @@ defmodule Pump.InfluxDBWriter do
   require Logger
 
   def write(http_client, data, custom_tags \\ []) do
-    Logger.debug("Send #{Enum.count(data)} measurements")
+    Logger.debug(fn -> "Send #{Enum.count(data)} measurements" end)
 
     data
     |> data_to_line_protocol(custom_tags)
@@ -39,7 +39,7 @@ defmodule Pump.InfluxDBWriter do
 
     case result do
       {:error, _} ->
-        Logger.debug("Error HTTP response: #{inspect(response)}")
+        Logger.debug(fn -> "Error HTTP response: #{inspect(response)}" end)
 
       _ ->
         nil
