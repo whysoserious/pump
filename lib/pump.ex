@@ -13,15 +13,14 @@ defmodule Pump do
   end
 
   def init(env) do
-    Logger.debug("Start Pump with env: #{inspect(env)}")
+    Logger.debug(fn -> "Start Pump with env: #{inspect(env)}" end)
 
     # required params
     base_url = Keyword.fetch!(env, :base_url)
     db_name = Keyword.fetch!(env, :db_name)
     send_interval = Keyword.fetch!(env, :send_interval)
-    device_id = Keyword.fetch!(env, :device_id)
-
     # optional params
+    device_id = get_device_id()
     user = Keyword.get(env, :user)
     password = Keyword.get(env, :password)
     custom_tags = Keyword.get(env, :custom_tags, [])
@@ -52,6 +51,12 @@ defmodule Pump do
 
   defp gather_stats() do
     VMMemory.metrics() ++ VMStatistics.metrics() ++ VMSystemInfo.metrics() ++ OSMon.metrics()
+  end
+
+  defp get_device_id do
+    System.cmd("cat", ["/proc/sys/kernel/hostname"])
+    |> elem(0)
+    |> String.trim()
   end
 
   defp send_stats(http_client, stats, tags) do

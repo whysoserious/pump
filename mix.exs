@@ -19,6 +19,6 @@ defmodule Pump.MixProject do
   end
 
   defp deps do
-    [{:jason, "~> 1.0"}, {:tesla, "1.0.0-beta.1"}]
+    [{:jason, "~> 1.0"}, {:tesla, "1.0.0"}]
   end
 end
